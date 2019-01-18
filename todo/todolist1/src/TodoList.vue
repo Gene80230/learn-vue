@@ -1,6 +1,7 @@
 <template>
   <div>
     <div>
+      <h1 v-text="title"></h1>
       <input v-model="inputValue"/>
       <button @click="handleSubmit">提交</button>
     </div>
@@ -24,6 +25,7 @@ export default {
   },
  data () {
    return {
+     title:'This is a todo list',
      inputValue: '',
      list: []
    }
@@ -41,5 +43,10 @@ export default {
 </script>
 
 <style>
-
+body{
+  margin-top:80px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
 </style>
